@@ -1,1 +1,21 @@
-PKG core
+B _build/default
+FLG -w -40
+PKG bigarray
+PKG bytes
+PKG compiler-libs
+PKG compiler-libs.common
+PKG cstruct
+PKG cstruct.ppx
+PKG lwt
+PKG lwt.log
+PKG lwt.unix
+PKG ocaml-migrate-parsetree
+PKG ocplib-endian
+PKG ocplib-endian.bigstring
+PKG ppx_cstruct
+PKG ppx_tools_versioned
+PKG ppx_tools_versioned.metaquot_404
+PKG rawlink
+PKG result
+PKG sexplib
+PKG unix
