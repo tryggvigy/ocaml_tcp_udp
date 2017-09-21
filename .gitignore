@@ -2,3 +2,5 @@
 *.cmi
 *.out
 .vscode 
+_build
+ether

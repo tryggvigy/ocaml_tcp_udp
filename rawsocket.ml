@@ -1,4 +1,3 @@
-(* UDP server *)
 
 let maxlen = 1024
 let portno = 8080
@@ -30,7 +29,7 @@ let () =
       match Unix.recvfrom sock buf 0 maxlen [] with
       | len, (Unix.ADDR_INET (addr, port) as sockaddr) -> String.sub buf 0 len, (Unix.gethostbyaddr addr).Unix.h_name, sockaddr
       | _ -> assert false in
-    Printf.printf "Client %s said: %s\n%!" hishost (String.uppercase response);
+    Printf.printf "Client %s said: %s\n%!" hishost response;
     (* Unix.sendto 
        sock
        (String.uppercase response) 
