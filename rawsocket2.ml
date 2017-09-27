@@ -9,6 +9,7 @@ with Unix.Unix_error(e, s1, s2) ->
 in
 while true do 
   let buf = Rawlink.read_packet link in
-  Printf.printf "got a packet with %d bytes.\n%!" (Cstruct.len buf);
+  Cstruct.hexdump buf
+  (* Printf.printf "got a packet with %d bytes.\n%!" (Cstruct.len buf); *)
 done
 (* Rawlink.send_packet link (Cstruct.create 1024) *)
